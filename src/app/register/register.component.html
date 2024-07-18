@@ -1,0 +1,40 @@
+   <div class="row">
+    <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+      <div class="card auth">
+        <div class="card-body auth-card">
+          <form (submit)="register()">
+              <div class="form-group">
+                <label for="name">User Name : </label>
+                <input type="text" name="name" class="form-control" placeholder="User Name" [(ngModel)]="username">
+              </div>
+            
+              <div class="form-group">
+                <label for="email">Email : </label>
+                <input type="text" name="email" class="form-control" placeholder="Email" [(ngModel)]="email">
+              </div>
+              <div class="form-group">
+                <label for="password">Password : </label>
+                <input type="password" name="password" class="form-control" placeholder="********" [(ngModel)]="password">
+              </div>
+              <div class="text-center">
+                <input type="submit" class="btn btn-my" value="Sign Up">
+              </div>
+              <div class="text-center login">
+                Already have an account ? <a routerLink="/login">Login</a> here.
+              </div>
+          </form>
+          <hr>
+          <div class="card-body">
+            <div class="facebookLogin">
+              <label>(or)</label>
+            </div>
+            <div class="facebookLogin">
+              <button class="btn btn-facebook" (click)="loginWithFacebook()">
+                Continue with Facebook
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

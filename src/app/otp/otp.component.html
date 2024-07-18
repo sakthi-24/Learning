@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+      <div class="card auth">
+        <div class="card-body auth-card">
+          <form (submit)="verifyOtp()">
+              <div class="form-group">
+                <label for="email">Email : </label>
+                <input type="text" name="email" class="form-control" placeholder="Email" disabled [(ngModel)]="email">
+              </div>
+              <div class="form-group">
+                <label for="password">otp : </label>
+                <input type="password" name="password" class="form-control" placeholder="*****" [(ngModel)]="otp">
+              </div>
+              <div class="text-center">
+                <input type="submit" class="btn btn-my" value="Verify OTP">
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

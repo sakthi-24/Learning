@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+    <div class="card auth">
+      <div class="card-body auth-card">
+        <form (submit)="onLogin()">
+          <div class="form-group">
+            <label for="email">Email : </label>
+            <input type="text" name="email" class="form-control" placeholder="Email" [(ngModel)]="email">
+          </div>
+          <div class="form-group">
+            <label for="password">Password : </label>
+            <input type="password" name="password" class="form-control" placeholder="********" [(ngModel)]="password">
+            <div class="text-right forget-pass">
+              <a routerLink="/forget-password">Forget Password ?</a>
+            </div>
+          </div>
+          <div class="text-center">
+            <input type="submit" class="btn btn-my" [disabled]="lockoutTime > 0" [value]="lockoutTime > 0 ? 'Wait ' + lockoutTime + ' seconds' : 'Login'">
+          </div>
+        </form>
+        <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+          {{ errorMessage }}
+        </div>
+        <hr>
+        <div class="card-body">
+          <div class="facebookLogin">
+            <label>(or)</label>
+          </div>
+          <div class="facebookLogin">
+            <button class="btn btn-facebook" (click)="loginWithFacebook()">
+              Login with Facebook
+            </button>
+          </div>
+        </div>
+        <div class="text-center sign-up">
+          Don`t have an account ? <a routerLink="/register">Sign Up</a> here.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <!-- d6bd043b850bf2386dba1606565f9177 -->
+  <!-- 880354460777330 -->

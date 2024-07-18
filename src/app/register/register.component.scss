@@ -1,0 +1,34 @@
+.login {
+  color: #fff;
+}
+.login a {
+  color: #d39e00;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-facebook,
+.btn-facebook:hover,
+.btn-facebook:first-child:active {
+  background: #3b5998;
+  border-color: #3b5998;
+  color: #fff;
+}
+
+.btn-facebook:hover {
+  opacity: 0.9;
+}
+
+.btn-facebook:first-child:active {
+  opacity: 0.8;
+}
+
+hr {
+  border-top: 1px solid #ffffff;
+}
+
+.facebookLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
